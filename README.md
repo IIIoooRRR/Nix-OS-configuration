@@ -11,9 +11,9 @@
 | Intellij IDEA | ❌             | Java programming IDE                                                             | ./script/user.nix              |
 ###  When installing, do not delete the hardware-configuration.nix file in your configuration.
 ## What it looks like
-![Image1](./src/image/screen.png)
+![Image1](./nixos/image/screen.png)
 ## Kitty's Configuration
-![Kitty](./src/image/kitty.png)
+![Kitty](./nixos/image/kitty.png)
 ### Hot keys
 - **ctrl+shift+z** new window
 - **super+shift+n** new os window 
