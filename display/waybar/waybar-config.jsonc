@@ -1,0 +1,36 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "wireplumber", "custom/power"],
+
+    "niri/workspaces": {
+        "format": "{name}",
+        "sort": "number"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "{calendar}"
+    },
+
+    "network": {
+        "format-wifi": "WiFi",
+        "format-ethernet": "Ethernet",
+        "format-disconnected": "Disconnected"
+    },
+
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "muted"
+    },
+
+    "custom/power": {
+    "format": "⏻",
+    "on-click": "echo -e 'Выключить\nПерезагрузить\nВыйти' | fuzzel --dmenu --config /etc/nixos/display/fuzzel/menu.ini | xargs -I{} bash -c 'case {} in Выключить) systemctl poweroff;; Перезагрузить) systemctl reboot;; Выйти) niri msg action quit;; esac'",
+    "tooltip": false
+     }
+}
