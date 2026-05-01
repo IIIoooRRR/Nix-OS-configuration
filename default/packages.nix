@@ -22,7 +22,6 @@ environment.systemPackages = with pkgs; [
     curl
     nftables
     yazi
-    
     kitty
     steam-run
     #comfort
@@ -55,4 +54,5 @@ environment.systemPackages = with pkgs; [
   };
 networking.nftables.enable = true;
 services.flatpak.enable = true;
+
 }

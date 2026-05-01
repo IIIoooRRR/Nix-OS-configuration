@@ -1,0 +1,2 @@
+wl-paste | sudo tee /etc/nixos/example/spawn.png > /dev/null
+

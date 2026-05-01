@@ -21,6 +21,7 @@ in
   ./display/write.nix
   ./display/cursor.nix
   ./display/mako.nix
+  ./display/sddm.nix
   ./terminal/zsh.nix
   ./terminal/fastfetch.nix
   ./terminal/kitty.nix
@@ -75,11 +76,6 @@ services.xserver.xkb.options = "grp:alt_shift_toggle";
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  services.displayManager.sddm = {
-  enable = true;
-  theme = "breeze";
-  wayland.enable = true;   
- };
   programs.yazi.enable = true;
   programs.zsh = {
      enable = true;
