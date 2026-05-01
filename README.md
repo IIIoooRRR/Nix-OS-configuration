@@ -4,8 +4,8 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 
 ---
 # Example
-![start](./example/start.png) ![fuzzel](./example/fuzzel.png)
-![firefox](./example/firefox.png) ![wallpaper](./example/wall.png)
+![start](./example/spawn.png)
+![wallpaper](./example/wall.png)
 
 
 ## 📂 File Structure
@@ -22,7 +22,7 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 | **Packages** | `/etc/nixos/default/packages.nix` | System-wide apps|
 
 ---
-
+![firefox](./example/firefox.png) 
 # ⌨️ Full Hotkeys & Aliases
 
 ## Core & Apps
@@ -41,6 +41,7 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 | `Mod + Q` | Close Active Window |
 | `Mod + Shift + E` | Exit Niri | 
 ### Mod + G and Mod +Z require pre-installation of these packages via a browser. I use patched GOland.
+![fuzzel](./example/fuzzel.png)
 
 ## Screenshots & Media
 
