@@ -4,10 +4,8 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 
 ---
 # Example
-[start](./example/start.png)
-[fuzzel](./example/fuzzel.png)
-[firefox](./example/firefox.png)
-[wallpaper](./example/wall.png)
+![start](./example/start.png) ![fuzzel](./example/fuzzel.png)
+![firefox](./example/firefox.png) ![wallpaper](./example/wall.png)
 
 
 ## 📂 File Structure
