@@ -88,7 +88,20 @@ services.xserver.xkb.options = "grp:alt_shift_toggle";
     '';
   };
   programs.niri.enable = true;
-	
+  security.polkit.extraConfig = ''
+  polkit.addRule(function(action, subject) {
+    if (
+      (action.id == "org.freedesktop.login1.reboot" ||
+       action.id == "org.freedesktop.login1.power-off") &&
+      subject.isInGroup("wheel")
+    ) {
+      return polkit.Result.YES;
+    }
+  });
+'';
+
+
+
   system.stateVersion = "25.11";
 
 }
