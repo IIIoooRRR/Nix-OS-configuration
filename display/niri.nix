@@ -2,6 +2,7 @@
 
 let
   unstable = import <nixos-unstable> {};
+  terminal = "kitty";
 in
 
 {
@@ -13,9 +14,9 @@ in
   home-manager.users.kezess.home.file.".config/niri/config.kdl".text = ''
     spawn-at-startup "waybar"
     spawn-at-startup "swaybg" "-i" "/etc/nixos/display/wall.jpg" "-m" "fill"
-    spawn-at-startup "kitty" "-e" "bash" "-c" "lavat; exec bash";
-    spawn-at-startup "kitty"
-    spawn-at-startup "kitty" "-e" "bash" "-c" "ncmpcpp; exec bash"
+    spawn-at-startup "${terminal}" "-e" "bash" "-c" "lavat; exec bash";
+    spawn-at-startup "${terminal}"
+    spawn-at-startup "${terminal}" "-e" "bash" "-c" "ncmpcpp; exec bash"
     output "eDP-1" {
         mode "1920x1080"
         scale 1.00
@@ -41,6 +42,8 @@ in
     window-rule {
         opacity 0.80
 	geometry-corner-radius 12
+        clip-to-geometry true
+         
     }
      window-rule {
         match app-id="vesktop"
@@ -62,13 +65,13 @@ binds {
 
     // windows
     Mod+Q { close-window; }
-    Mod+T { spawn "kitty"; }
+    Mod+T { spawn "${terminal}"; }
     Mod+D { spawn "fuzzel"; }
     Mod+W { spawn "firefox"; }
-    Mod+Z { spawn "kitty" "-e" "bash" "-c" "cd ~/zapret && ./service.sh; exec bash"; }
-    Mod+F { spawn "dolphin"; }
-    Mod+M { spawn "kitty" "-e" "bash" "-c" "ncmpcpp; exec bash"; }
-    Mod+L { spawn "kitty" "-e" "bash" "-c" "lavat; exec bash"; }
+    Mod+Z { spawn "${terminal}" "-e" "bash" "-c" "cd ~/zapret && ./service.sh; exec bash"; }
+    Mod+F { spawn "${terminal}" "-e" "bash" "-c" "yazi; exec bash"; }
+    Mod+M { spawn "${terminal}" "-e" "bash" "-c" "ncmpcpp; exec bash"; }
+    Mod+L { spawn "${terminal}" "-e" "bash" "-c" "lavat; exec bash"; }
     Mod+G { spawn "steam-run" "/home/kezess/GoLand-2026.1/bin/goland"; }
 
     // navig

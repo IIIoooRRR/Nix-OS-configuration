@@ -13,7 +13,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   imports = [
- ./hardware-configuration.nix
+  ./hardware-configuration.nix
   ./default/user.nix
   ./default/packages.nix
    (import "${home-manager}/nixos")
@@ -21,7 +21,6 @@ in
   ./display/write.nix
   ./display/cursor.nix
   ./display/mako.nix
-  ./display/sddm.nix
   ./terminal/zsh.nix
   ./terminal/fastfetch.nix
   ./terminal/kitty.nix
@@ -76,11 +75,18 @@ services.xserver.xkb.options = "grp:alt_shift_toggle";
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  services.getty.autologinUser = "kezess";
   programs.yazi.enable = true;
-  programs.zsh = {
-     enable = true;
-     interactiveShellInit = "fastfetch";
-   };
+     programs.zsh = {
+    enable = true;
+    promptInit = ''
+      fastfetch
+      
+      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+        exec niri
+      fi
+    '';
+  };
   programs.niri.enable = true;
 	
   system.stateVersion = "25.11";
