@@ -1,4 +1,4 @@
-# Nix-OS Configuration (Niri Branch) 🌀
+# Nix-OS Configuration (Niri Branch) 
 
 Personal **NixOS** configuration tailored for the **Niri** compositor with a focus on transparency, blur, and aesthetic minimalism.
 
@@ -20,13 +20,17 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 
 ---
 
-## 🚀 Quick Aliases
+## ⌨️ Niri Keybindings & Aliases
 
 
-| Alias | Command | Action |
-| :--- | :--- | :--- |
-| `nix-up` | `sudo nixos-rebuild switch` | Rebuild and apply system configuration |
-| `c` | `clear && neofetch` | Clear terminal and show system info |
+| Shortcut / Alias | Action |
+| :--- | :--- |
+| `Mod + Enter` | Open **Kitty** Terminal |
+| `Mod + D` | Open **Fuzzel** Launcher |
+| `Mod + Q` | Close Active Window |
+| `Mod + Left/Right` | Column Focus Navigation |
+| `nix-up` | `sudo nixos-rebuild switch` (System Rebuild) |
+| `c` | `clear && neofetch` (System Info) |
 
 ---
 
@@ -51,3 +55,4 @@ git clone -b niri https://github.com
 sudo cp -r Nix-OS-configuration/* /etc/nixos/
 nix-up
 ```
+
