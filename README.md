@@ -20,17 +20,54 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 
 ---
 
-## ⌨️ Niri Keybindings & Aliases
+## ⌨️ Full Hotkeys & Aliases
+
+### System & Core Apps
 
 
-| Shortcut / Alias | Action |
+| Shortcut | Action |
 | :--- | :--- |
 | `Mod + Enter` | Open **Kitty** Terminal |
 | `Mod + D` | Open **Fuzzel** Launcher |
 | `Mod + Q` | Close Active Window |
-| `Mod + Left/Right` | Column Focus Navigation |
-| `nix-up` | `sudo nixos-rebuild switch` (System Rebuild) |
-| `c` | `clear && neofetch` (System Info) |
+| `Mod + Shift + E` | Exit Niri (Logout) |
+| `Mod + L` | Lock Screen |
+| `PrintScreen` | Take Screenshot |
+
+### Window & Column Management
+
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Mod + H` / `Left` | Focus Column Left |
+| `Mod + L` / `Right` | Focus Column Right |
+| `Mod + K` / `Up` | Focus Window Up |
+| `Mod + J` / `Down` | Focus Window Down |
+| `Mod + Shift + H` / `Left` | Move Column Left |
+| `Mod + Shift + L` / `Right` | Move Column Right |
+| `Mod + R` | Switch Preset Window Widths |
+| `Mod + F` | Toggle Fullscreen |
+| `Mod + C` | Center Column |
+| `Mod + Minus` | Consume Window into Column |
+| `Mod + Plus` | Expel Window from Column |
+
+### Workspace Navigation
+
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Mod + 1-9` | Switch to Workspace 1-9 |
+| `Mod + Shift + 1-9` | Move Window to Workspace 1-9 |
+| `Mod + Wheel Down` | Next Workspace |
+| `Mod + Wheel Up` | Previous Workspace |
+
+### Shell Aliases
+
+
+| Alias | Command | Action |
+| :--- | :--- | :--- |
+| `nix-up` | `sudo nixos-rebuild switch` | Rebuild and apply system configuration |
+| `c` | `clear && neofetch` | Clear terminal and show system info |
 
 ---
 
@@ -54,5 +91,7 @@ When installing on a new machine, **do not replace** your `hardware-configuratio
 git clone -b niri https://github.com
 sudo cp -r Nix-OS-configuration/* /etc/nixos/
 nix-up
+```
+
 ```
 
