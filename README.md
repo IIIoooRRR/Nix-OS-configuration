@@ -1,4 +1,4 @@
-# Nix-OS Configuration (Niri Branch) 🌀
+# Nix-OS Configuration (Niri Branch) 
 
 Personal **NixOS** configuration tailored for the **Niri** compositor with a focus on transparency, blur, and aesthetic minimalism.
 
@@ -84,6 +84,7 @@ When installing on a new machine, **do not replace** your `hardware-configuratio
 # Deployment:
 git clone -b niri https://github.com
 sudo cp -r Nix-OS-configuration/* /etc/nixos/
+sudo rm -rf /etc/nixos/example #its png for github
 nix-up
 ```
 
