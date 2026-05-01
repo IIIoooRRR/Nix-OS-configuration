@@ -31,7 +31,7 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 | `Mod + T` | Open **Kitty** Terminal |
 | `Mod + D` | Open **Fuzzel** Launcher |
 | `Mod + W` | Open **Firefox** |
-| `Mod + F` | Open **Dolphin** File Manager |
+| `Mod + F` | Open **Yazi** File Manager |
 | `Mod + G` | Launch **GoLand** IDE |
 | `Mod + Z` | Start **Zapret** Service (in Kitty) |
 | `Mod + M` | Open **NCMPCPP** Music Player |
