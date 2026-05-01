@@ -5,11 +5,9 @@ Personal **NixOS** configuration tailored for the **Niri** compositor with a foc
 ---
 # Example
 ![start](./example/spawn.png)
-![wallpaper](./example/wall.png)
-
 
 ## 📂 File Structure
-
+![wallpaper](./example/wall.png)
 
 | Module | File Path | Description |
 | :--- | :--- | :--- |
