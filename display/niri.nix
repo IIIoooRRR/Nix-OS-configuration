@@ -14,9 +14,14 @@ in
   home-manager.users.kezess.home.file.".config/niri/config.kdl".text = ''
     spawn-at-startup "waybar"
     spawn-at-startup "swaybg" "-i" "/etc/nixos/display/wall.jpg" "-m" "fill"
-    spawn-at-startup "${terminal}" "-e" "bash" "-c" "lavat; exec bash";
-    spawn-at-startup "${terminal}"
-    spawn-at-startup "${terminal}" "-e" "bash" "-c" "ncmpcpp; exec bash"
+    spawn-at-startup "mako"
+
+    spawn-at-startup "${terminal}" "--title" "lavat" "-e" "bash" "-c" "lavat; exec bash"
+    spawn-at-startup "${terminal}" "--title" "${terminal}" "-e" "bash" "-c" "${terminal}; exec bash"
+    spawn-at-startup "${terminal}" "--title" "ncmpcpp" "-e" "bash" "-c" "ncmpcpp; exec bash"
+    spawn-at-startup "${terminal}" "--title" "peaclock" "-e" "bash" "-c" "peaclock; exec bash"
+    spawn-at-startup "${terminal}" "--title" "yazi" "-e" "bash" "-c" "yazi; exec bash"
+    spawn-at-startup "${terminal}" "--tittle" "cava" "-e" "bash" "-c" "cava; exec bash"
     output "eDP-1" {
         mode "1920x1080"
         scale 1.00
@@ -58,6 +63,28 @@ in
         match app-id="org.vinegarhq.Sober"
         opacity 1.00
    }
+   
+window-rule {
+    match title="lavat"
+    match title="${terminal}"
+    default-column-width { fixed 694; }
+    default-window-height { fixed 501; }
+}
+
+window-rule {
+    match title="peaclock"
+    match title="yazi"
+    match title="cava"
+    default-column-width { fixed 569; }
+    default-window-height { fixed 329; }
+}
+
+window-rule {
+    match title="ncmpcpp"
+    default-column-width { fixed 569; }
+    default-window-height { fixed 1018; }
+}
+
 binds {
     Print { spawn "sh" "-c" "grim - | wl-copy"; }
     Shift+Mod+S { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }

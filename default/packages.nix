@@ -17,6 +17,8 @@ environment.systemPackages = with pkgs; [
     fastfetch
     imagemagick
     lavat
+    cava
+    peaclock
     #utils
     git
     curl
@@ -42,6 +44,7 @@ environment.systemPackages = with pkgs; [
     go
     gcc
     gnumake
+    tree
     #music
 	(ncmpcpp.override { visualizerSupport = true; })	
   ];
